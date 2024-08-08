@@ -328,7 +328,7 @@ section {
     }
 }
 
-/* Ensure header nav has two buttons per line on smaller screens */
+/* Ensure header nav displays two buttons per line on tablets and smaller screens */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -336,27 +336,46 @@ section {
         text-align: center;
     }
 
+    nav {
+        width: 100%; /* Make sure nav takes the full width */
+    }
+
     nav ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two buttons per line */
-        gap: 0; /* No gap between items */
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap onto the next line */
+        justify-content: center; /* Center items horizontally */
         padding: 0;
-        width: 100%;
+        margin: 0;
+        list-style: none; /* Remove default list styling */
     }
 
     nav li {
-        margin: 0; /* Remove margin to ensure full-width buttons */
+        flex: 1 1 50%; /* Make each item take up 50% of the width (2 items per line) */
+        box-sizing: border-box;
     }
 
     nav a {
+        display: block;
         padding: 0.5rem 1rem; /* Adjust padding for better fit */
         text-align: center; /* Center text inside buttons */
+        background-color: #361B6B;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background-color: #5A3D93; /* Hover effect */
     }
 }
 
 /* Adjust navigation for very small screens */
 @media (max-width: 480px) {
     nav ul {
-        grid-template-columns: 1fr; /* Stack buttons vertically on very small screens */
+        flex-direction: column; /* Stack buttons vertically on very small screens */
+    }
+
+    nav li {
+        flex: 1 1 auto; /* Allow items to grow/shrink based on content */
+        width: 100%; /* Ensure each item takes full width */
     }
 }
