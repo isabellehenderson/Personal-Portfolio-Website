@@ -1,0 +1,286 @@
+/* General Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Soft light gray background */
+    color: #333; /* Darker text color for better contrast */
+}
+
+/* Header and Navigation */
+
+header {
+    background-color: #361B6B;
+    padding: 0; /* Adjust the padding if needed for spacing */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: none; /* Remove the max-width constraint */
+    width: 100%; /* Make the container full width */
+    padding: 0 1rem; /* Optional: Add padding to control the horizontal space */
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    margin: 0; /* Ensure there's no margin pushing it away */
+    padding: 0; /* Ensure there's no padding pushing it away */
+    transition: transform 0.2s ease 0.3s;
+}
+
+.name:hover {
+    transform:scale(1.1);
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    flex: 1; /* Make each list item take up an equal portion of space */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+nav a {
+    display: block; /* Ensure the anchor tag takes the full space */
+    text-decoration: none;
+    color: white;
+    background-color: #361B6B;
+    padding: 1rem; /* Space around the text */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Include padding in the width/height */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #5A3D93;
+}
+
+nav a:active {
+    background-color: #5d5d5d;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 60px;
+}
+
+/* Section Titles */
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 1rem;
+}
+
+/* About Me */
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff; /* White background for contrast */
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Softer shadow */
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.about-image {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.profile-image {
+    width: 250px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 5px;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+}
+
+.about-me {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+}
+
+/* Projects */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* White background for contrast */
+    padding: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    min-height: 300px; /* Ensure a minimum height */
+    position: relative; /* Positioning context for the button container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for scale and shadow */
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Softer shadow */
+}
+
+.project-date {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 60%;
+    margin-bottom: 1rem; /* Space between description and button container */
+}
+
+.project-card .description {
+    flex: 1; /* Allows description to take up available space */
+}
+
+
+.skill-icons {
+    display: flex;
+    gap: 0.5rem; /* Space between icons */
+    margin-top: 1rem;
+    overflow: visible; /* Ensure icons are not clipped */
+}
+
+.skill-icons img {
+    width: 35px; /* Adjust size as needed */
+    height: 35px; /* Adjust size as needed */
+    object-fit: contain; 
+    filter: invert(0%) grayscale(100%) brightness(0%) sepia(100%);
+}
+
+.button-container {
+    display: flex; /* Align buttons horizontally */
+    gap: 0.5rem; /* Space between buttons */
+    margin-top: auto; /* Push buttons to the bottom of the card */
+    width: 100%; /* Ensure container takes full width */
+}
+
+.project-link {
+    flex: 1; /* Make buttons take up equal space */
+    display: inline-block;
+    background-color: #361B6B;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center; /* Center text inside buttons */
+    box-sizing: border-box; /* Ensure padding does not affect button size */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+}
+
+.project-link:hover {
+    background-color: #5A3D93; /* Color change on hover */
+}
+
+.project-link:active {
+    background-color: #5d5d5d; /* Color change when button is pressed */
+}
+
+/* Skills */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    justify-content: center; /* Center align the grid items */
+}
+
+.skills-grid img {
+    width: 80px; /* Fixed width */
+    height: 80px; /* Fixed height */
+    object-fit: contain; /* Ensure the entire image fits within the box */
+    display: block;
+    margin: auto; /* Center align images in their grid cells */
+    filter: grayscale(100%);
+    transition: transform 0.3s, filter 0.3s; /* Smooth transitions for hover effects */
+}
+
+.skills-grid img:hover {
+    transform: scale(1.15); /* Slightly enlarge the image on hover */
+    filter: grayscale(0%); /* Ensure image is colored on hover */
+}
+
+.more-skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    padding: 1rem; /* Padding to create space inside */
+    margin-left: 3rem;
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+}
+
+.more-skills span {
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Contact */
+
+.contact-links {
+    display: flex;
+    justify-content: left; /* Align the icons horizontally */
+    gap: 1rem; /* Space between icons */
+    margin-top: 2rem; /* Optional: Space above the contact section */
+}
+
+.contact-icon img {
+    width: 40px; /* Adjust size of icons */
+    height: 40px; /* Adjust size of icons */
+    display: block; /* Remove any extra space below images */
+    object-fit: contain; /* Ensure the entire image fits within the box */
+    transition: transform 0.3s ease; /* Smooth transitions */
+}
+
+.contact-icon img:hover {
+    transform: scale(1.25); /* Grow slightly on hover */
+}
+
+.contact-icon img:active {
+    transform: scale(1); /* Shrink slightly when pressed */
+}
