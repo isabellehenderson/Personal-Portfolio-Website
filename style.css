@@ -328,20 +328,35 @@ section {
     }
 }
 
-/* Ensure header nav is stackable on very small screens */
-@media (max-width: 480px) {
+/* Ensure header nav has two buttons per line on smaller screens */
+@media (max-width: 768px) {
     .header-content {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
 
     nav ul {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two buttons per line */
+        gap: 0; /* No gap between items */
+        padding: 0;
         width: 100%;
     }
 
+    nav li {
+        margin: 0; /* Remove margin to ensure full-width buttons */
+    }
+
     nav a {
-        padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
-        width: auto;
+        padding: 0.5rem 1rem; /* Adjust padding for better fit */
+        text-align: center; /* Center text inside buttons */
+    }
+}
+
+/* Adjust navigation for very small screens */
+@media (max-width: 480px) {
+    nav ul {
+        grid-template-columns: 1fr; /* Stack buttons vertically on very small screens */
     }
 }
