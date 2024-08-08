@@ -8,15 +8,15 @@
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0; /* Soft light gray background */
-    color: #333; /* Darker text color for better contrast */
+    background-color: #f0f0f0; 
+    color: #333; 
 }
 
 /* Header and Navigation */
 
 header {
     background-color: #361B6B;
-    padding: 0; /* Adjust the padding if needed for spacing */
+    padding: 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -26,9 +26,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: none; /* Remove the max-width constraint */
-    width: 100%; /* Make the container full width */
-    padding: 0 1rem; /* Optional: Add padding to control the horizontal space */
+    max-width: none;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .name {
@@ -36,8 +36,8 @@ header {
     font-weight: bold;
     color: white;
     letter-spacing: 1px;
-    margin: 0; /* Ensure there's no margin pushing it away */
-    padding: 0; /* Ensure there's no padding pushing it away */
+    margin: 0;
+    padding: 0;
     transition: transform 0.2s ease 0.3s;
 }
 
@@ -57,20 +57,20 @@ nav ul {
 }
 
 nav li {
-    flex: 1; /* Make each list item take up an equal portion of space */
-    margin: 0; /* Remove any margin */
-    padding: 0; /* Remove any padding */
+    flex: 1;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-    display: block; /* Ensure the anchor tag takes the full space */
+    display: block;
     text-decoration: none;
     color: white;
     background-color: #361B6B;
-    padding: 1rem; /* Space around the text */
+    padding: 1rem;
     width: 100%;
     height: 100%;
-    box-sizing: border-box; /* Include padding in the width/height */
+    box-sizing: border-box;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -106,10 +106,10 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #ffffff; /* White background for contrast */
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Softer shadow */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 .about-text {
@@ -122,8 +122,8 @@ section {
 }
 
 .profile-image {
-    width: 250px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
+    width: 250px;
+    height: auto;
     border-radius: 5px;
     object-fit: cover;
     display: block;
@@ -146,13 +146,13 @@ section {
 .project-card {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff; /* White background for contrast */
+    background-color: #ffffff;
     padding: 1rem;
     border-radius: 5px;
     overflow: hidden;
-    min-height: 300px; /* Ensure a minimum height */
-    position: relative; /* Positioning context for the button container */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for scale and shadow */
+    min-height: 300px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card img {
@@ -165,53 +165,53 @@ section {
 
 .project-card:hover {
     transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Softer shadow */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 .project-date {
     font-size: 14px;
     font-style: italic;
     opacity: 60%;
-    margin-bottom: 1rem; /* Space between description and button container */
+    margin-bottom: 1rem;
 }
 
 .project-card .description {
-    flex: 1; /* Allows description to take up available space */
+    flex: 1;
 }
 
 
 .skill-icons {
     display: flex;
-    gap: 0.5rem; /* Space between icons */
+    gap: 0.5rem;
     margin-top: 1rem;
-    overflow: visible; /* Ensure icons are not clipped */
+    overflow: visible;
 }
 
 .skill-icons img {
-    width: 35px; /* Adjust size as needed */
-    height: 35px; /* Adjust size as needed */
+    width: 35px;
+    height: 35px;
     object-fit: contain; 
     filter: invert(0%) grayscale(100%) brightness(0%) sepia(100%);
 }
 
 .button-container {
-    display: flex; /* Align buttons horizontally */
-    gap: 0.5rem; /* Space between buttons */
-    margin-top: auto; /* Push buttons to the bottom of the card */
-    width: 100%; /* Ensure container takes full width */
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    width: 100%;
 }
 
 .project-link {
-    flex: 1; /* Make buttons take up equal space */
+    flex: 1;
     display: inline-block;
     background-color: #361B6B;
     color: #fff;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 3px;
-    text-align: center; /* Center text inside buttons */
-    box-sizing: border-box; /* Ensure padding does not affect button size */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .project-link:hover {
@@ -228,39 +228,39 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1rem;
-    justify-content: center; /* Center align the grid items */
+    justify-content: center;
 }
 
 .skills-grid img {
-    width: 80px; /* Fixed width */
-    height: 80px; /* Fixed height */
-    object-fit: contain; /* Ensure the entire image fits within the box */
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
     display: block;
-    margin: auto; /* Center align images in their grid cells */
+    margin: auto;
     filter: grayscale(100%);
-    transition: transform 0.3s, filter 0.3s; /* Smooth transitions for hover effects */
+    transition: transform 0.3s, filter 0.3s;
 }
 
 .skills-grid img:hover {
     transform: scale(1.15); /* Slightly enlarge the image on hover */
-    filter: grayscale(0%); /* Ensure image is colored on hover */
+    filter: grayscale(0%); /* Color image on hover */
 }
 
 /* Contact */
 
 .contact-links {
     display: flex;
-    justify-content: left; /* Align the icons horizontally */
-    gap: 1rem; /* Space between icons */
-    margin-top: 2rem; /* Optional: Space above the contact section */
+    justify-content: left;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .contact-icon img {
-    width: 40px; /* Adjust size of icons */
-    height: 40px; /* Adjust size of icons */
-    display: block; /* Remove any extra space below images */
-    object-fit: contain; /* Ensure the entire image fits within the box */
-    transition: transform 0.3s ease; /* Smooth transitions */
+    width: 40px;
+    height: 40px;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .contact-icon img:hover {
@@ -287,7 +287,7 @@ section {
     }
 
     .profile-image {
-        width: 200px; /* Adjust image size if needed */
+        width: 200px;
     }
 }
 
@@ -301,20 +301,16 @@ section {
 /* Adjust skill icons for smaller screens */
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Adjust grid for smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); 
     }
 
     .skills-grid img {
-        width: 60px; /* Smaller size for smaller screens */
+        width: 60px;
         height: 60px;
-    }
-
-    .more-skills {
-        margin-left: 0;
     }
 }
 
-/* Ensure header nav displays two buttons per line on tablets and smaller screens */
+/* Header nav displays two buttons per line on tablets and smaller screens */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -323,16 +319,16 @@ section {
     }
 
     nav {
-        width: 100%; /* Make sure nav takes the full width */
+        width: 100%;
     }
 
     nav ul {
         display: flex;
-        flex-wrap: wrap; /* Allow items to wrap onto the next line */
-        justify-content: center; /* Center items horizontally */
+        flex-wrap: wrap;
+        justify-content: center;
         padding: 0;
         margin: 0;
-        list-style: none; /* Remove default list styling */
+        list-style: none;
     }
 
     nav li {
@@ -342,8 +338,8 @@ section {
 
     nav a {
         display: block;
-        padding: 0.5rem 1rem; /* Adjust padding for better fit */
-        text-align: center; /* Center text inside buttons */
+        padding: 0.5rem 1rem;
+        text-align: center;
         background-color: #361B6B;
         color: white;
         text-decoration: none;
@@ -358,11 +354,11 @@ section {
 @media (max-width: 480px) {
     nav ul {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Create four equal columns */
-        gap: 0; /* Adjust spacing between buttons if needed */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
         padding: 0;
         margin: 0;
-        width: 100%; /* Ensure nav takes full width */
+        width: 100%;
     }
 
     nav li {
@@ -370,8 +366,8 @@ section {
     }
 
     nav a {
-        padding: 0.5rem; /* Adjust padding for smaller screens */
-        text-align: center; /* Center text inside buttons */
-        box-sizing: border-box; /* Include padding in the width/height */
+        padding: 0.5rem;
+        text-align: center;
+        box-sizing: border-box;
     }
 }
