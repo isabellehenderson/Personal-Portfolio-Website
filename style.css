@@ -8,15 +8,15 @@
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0; 
-    color: #333; 
+    background-color: #f0f0f0; /* Soft light gray background */
+    color: #333; /* Darker text color for better contrast */
 }
 
 /* Header and Navigation */
 
 header {
     background-color: #361B6B;
-    padding: 0; 
+    padding: 0; /* Adjust the padding if needed for spacing */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -24,10 +24,11 @@ header {
 
 .header-content {
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    width: 100%; 
-    padding: 0 1rem; 
+    justify-content: space-between;
+    align-items: center;
+    max-width: none; /* Remove the max-width constraint */
+    width: 100%; /* Make the container full width */
+    padding: 0 1rem; /* Optional: Add padding to control the horizontal space */
 }
 
 .name {
@@ -35,38 +36,40 @@ header {
     font-weight: bold;
     color: white;
     letter-spacing: 1px;
-    margin: 0; 
-    padding: 0; 
+    margin: 0; /* Ensure there's no margin pushing it away */
+    padding: 0; /* Ensure there's no padding pushing it away */
     transition: transform 0.2s ease 0.3s;
 }
 
 .name:hover {
-    transform: scale(1.1);
+    transform:scale(1.1);
 }
 
 nav {
-    width: 100%; /* Make nav take the full width */
+    display: flex;
 }
 
 nav ul {
     display: flex;
-    justify-content: center; /* Center the list items horizontally */
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 nav li {
-    margin: 0;
+    flex: 1; /* Make each list item take up an equal portion of space */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
 }
 
 nav a {
-    display: block; 
+    display: block; /* Ensure the anchor tag takes the full space */
     text-decoration: none;
     color: white;
     background-color: #361B6B;
     padding: 1rem; /* Space around the text */
-    text-align: center; /* Center text inside buttons */
+    width: 100%;
+    height: 100%;
     box-sizing: border-box; /* Include padding in the width/height */
     transition: background-color 0.3s, color 0.3s;
 }
@@ -103,10 +106,10 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: #ffffff; /* White background for contrast */
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Softer shadow */
 }
 
 .about-text {
@@ -119,8 +122,8 @@ section {
 }
 
 .profile-image {
-    width: 250px; 
-    height: auto; 
+    width: 250px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
     border-radius: 5px;
     object-fit: cover;
     display: block;
@@ -143,13 +146,13 @@ section {
 .project-card {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #ffffff; /* White background for contrast */
     padding: 1rem;
     border-radius: 5px;
     overflow: hidden;
-    min-height: 300px; 
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    min-height: 300px; /* Ensure a minimum height */
+    position: relative; /* Positioning context for the button container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for scale and shadow */
 }
 
 .project-card img {
@@ -162,19 +165,20 @@ section {
 
 .project-card:hover {
     transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Softer shadow */
 }
 
 .project-date {
     font-size: 14px;
     font-style: italic;
     opacity: 60%;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem; /* Space between description and button container */
 }
 
 .project-card .description {
     flex: 1; /* Allows description to take up available space */
 }
+
 
 .skill-icons {
     display: flex;
@@ -184,17 +188,17 @@ section {
 }
 
 .skill-icons img {
-    width: 35px; 
-    height: 35px;
+    width: 35px; /* Adjust size as needed */
+    height: 35px; /* Adjust size as needed */
     object-fit: contain; 
     filter: invert(0%) grayscale(100%) brightness(0%) sepia(100%);
 }
 
 .button-container {
-    display: flex;
+    display: flex; /* Align buttons horizontally */
     gap: 0.5rem; /* Space between buttons */
     margin-top: auto; /* Push buttons to the bottom of the card */
-    width: 100%;
+    width: 100%; /* Ensure container takes full width */
 }
 
 .project-link {
@@ -206,8 +210,8 @@ section {
     text-decoration: none;
     border-radius: 3px;
     text-align: center; /* Center text inside buttons */
-    box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box; /* Ensure padding does not affect button size */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
 }
 
 .project-link:hover {
@@ -224,53 +228,39 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1rem;
-    justify-content: center;
+    justify-content: center; /* Center align the grid items */
 }
 
 .skills-grid img {
-    width: 80px;
-    height: 80px;
+    width: 80px; /* Fixed width */
+    height: 80px; /* Fixed height */
     object-fit: contain; /* Ensure the entire image fits within the box */
     display: block;
-    margin: auto; 
+    margin: auto; /* Center align images in their grid cells */
     filter: grayscale(100%);
-    transition: transform 0.3s, filter 0.3s; 
+    transition: transform 0.3s, filter 0.3s; /* Smooth transitions for hover effects */
 }
 
 .skills-grid img:hover {
     transform: scale(1.15); /* Slightly enlarge the image on hover */
-    filter: grayscale(0%); /* Image is colored on hover */
-}
-
-.more-skills {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    padding: 1rem;
-    margin-left: 3rem;
-    white-space: nowrap; /* Prevent text from wrapping to a new line */
-}
-
-.more-skills span {
-    font-weight: bold; 
+    filter: grayscale(0%); /* Ensure image is colored on hover */
 }
 
 /* Contact */
 
 .contact-links {
     display: flex;
-    justify-content: center; /* Center the icons horizontally */
+    justify-content: left; /* Align the icons horizontally */
     gap: 1rem; /* Space between icons */
-    margin-top: 2rem; 
+    margin-top: 2rem; /* Optional: Space above the contact section */
 }
 
 .contact-icon img {
-    width: 40px;
-    height: 40px; 
-    display: block; 
-    object-fit: contain; 
-    transition: transform 0.3s ease; 
+    width: 40px; /* Adjust size of icons */
+    height: 40px; /* Adjust size of icons */
+    display: block; /* Remove any extra space below images */
+    object-fit: contain; /* Ensure the entire image fits within the box */
+    transition: transform 0.3s ease; /* Smooth transitions */
 }
 
 .contact-icon img:hover {
@@ -278,7 +268,7 @@ section {
 }
 
 .contact-icon img:active {
-    transform: scale(1); /* Shrink back when pressed */
+    transform: scale(1); /* Shrink slightly when pressed */
 }
 
 /* Media Queries for Responsive Design */
@@ -293,17 +283,95 @@ section {
 
     .about-text {
         padding-right: 0;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem; /* Add space below text when image is on top */
     }
 
     .profile-image {
-        width: 200px;
+        width: 200px; /* Adjust image size if needed */
     }
 }
 
-/* Center navbar buttons on small screens */
+/* Stack projects vertically for smaller screens */
 @media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* One project per row */
+    }
+}
+
+/* Adjust skill icons for smaller screens */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Adjust grid for smaller screens */
+    }
+
+    .skills-grid img {
+        width: 60px; /* Smaller size for smaller screens */
+        height: 60px;
+    }
+
+    .more-skills {
+        margin-left: 0;
+    }
+}
+
+/* Ensure header nav displays two buttons per line on tablets and smaller screens */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%; /* Make sure nav takes the full width */
+    }
+
     nav ul {
-        justify-content: center; /* Center navbar items */
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap onto the next line */
+        justify-content: center; /* Center items horizontally */
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Remove default list styling */
+    }
+
+    nav li {
+        flex: 1 1 50%; /* Make each item take up 50% of the width (2 items per line) */
+        box-sizing: border-box;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.5rem 1rem; /* Adjust padding for better fit */
+        text-align: center; /* Center text inside buttons */
+        background-color: #361B6B;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background-color: #5A3D93; /* Hover effect */
+    }
+}
+
+/* Adjust navigation for very small screens */
+@media (max-width: 480px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Create four equal columns */
+        gap: 0; /* Adjust spacing between buttons if needed */
+        padding: 0;
+        margin: 0;
+        width: 100%; /* Ensure nav takes full width */
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        text-align: center; /* Center text inside buttons */
+        box-sizing: border-box; /* Include padding in the width/height */
     }
 }
