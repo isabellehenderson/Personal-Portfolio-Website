@@ -379,3 +379,17 @@ section {
         width: 100%; /* Ensure each item takes full width */
     }
 }
+
+/* For screens larger than 768px (tablets and desktops) */
+@media (min-width: 769px) {
+    section {
+        scroll-margin-top: 60px; /* Adjust based on the height of your fixed header */
+    }
+}
+
+/* For screens smaller than or equal to 768px (mobile devices) */
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 80px; /* Adjust based on the height of your fixed header on mobile */
+    }
+}
