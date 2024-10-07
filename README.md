@@ -15,4 +15,4 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 - **CSS3**: For styling and layout.
 - **JavaScript**: For interactive elements and form handling.
 
-  Link to website: https://isabellehenderson.github.io/personal-website/
+  Link to website: [https://isabellehenderson.github.io/personal-website/](https://isabellehenderson.github.io/Personal-Portfolio-Website/)
