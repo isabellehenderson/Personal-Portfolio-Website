@@ -274,6 +274,55 @@ section {
     transform: translateY(0);
 }
 
+/* Experience Timeline */
+
+.timeline-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-date {
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    margin-bottom: 0.4rem;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+    .timeline-item {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-date {
+        margin-bottom: 0.25rem;
+    }
+}
+
 
 /* Coursework */
 
