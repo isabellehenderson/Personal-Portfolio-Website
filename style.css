@@ -101,6 +101,11 @@ section {
     margin-bottom: 1rem;
 }
 
+.tagline {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
 /* About Me */
 
 .about-container {
@@ -183,6 +188,14 @@ section {
 
 .project-card .description {
     flex: 1;
+}
+
+.project-subtext {
+    font-size: 12px;
+    font-style: italic;
+    opacity: 60%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 
@@ -327,6 +340,10 @@ section {
 /* Coursework */
 
 .coursework-container {
+    display: grid; /* NEW */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; 
+
     background-color: #ffffff;
     padding: 2rem;
     border-radius: 5px;
@@ -338,6 +355,18 @@ section {
     padding-left: 1.5rem;
     font-size: 20px;
     line-height: 1.8;
+}
+
+.course-category h3 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.course-category ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* Certifications */
@@ -410,6 +439,10 @@ section {
 @media (max-width: 768px) {
     .project-grid {
         grid-template-columns: 1fr; /* One project per row */
+    }
+
+    .coursework-container {
+    grid-template-columns: 1fr;
     }
 }
 
